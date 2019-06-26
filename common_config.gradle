@@ -1,0 +1,15 @@
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+dependencies {
+
+    implementation libraries.kotlinCompiler
+
+    testImplementation testLibraries.junit
+    testImplementation testLibraries.mockitoCore
+    testImplementation testLibraries.mockitoInline
+    testImplementation testLibraries.mockitoKotlin
+
+    implementation libraries.rxJava2
+    implementation libraries.gson
+}

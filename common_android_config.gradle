@@ -1,0 +1,44 @@
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+dependencies {
+
+    implementation libraries.dagger
+    kapt libraries.daggerCompiler
+
+    implementation libraries.roomRuntime
+    kapt libraries.roomCompiler
+
+    implementation libraries.androidxAppCompat
+    implementation libraries.androidxKtxCore
+
+    implementation libraries.retrofit
+    implementation libraries.retrofitGsonConverter
+    implementation libraries.retrofitRxAdapter
+
+    implementation libraries.okHttp3
+    implementation libraries.okHttp3LogInterceptor
+
+    testImplementation testLibraries.archCoreTesting
+    testImplementation testLibraries.roboElectric
+    testImplementation testLibraries.espressoCore
+    testImplementation testLibraries.espressoContrib
+    testImplementation testLibraries.espressoIntent
+
+    testImplementation testLibraries.androidxKtxTesting
+    testImplementation testLibraries.androidxJunitKtx
+    testImplementation testLibraries.androidxTestRules
+    implementation testLibraries.androidxTestCore
+
+    androidTestImplementation testLibraries.androidxJunitKtx
+    androidTestImplementation testLibraries.roomTest
+    androidTestImplementation testLibraries.archCoreTesting
+    androidTestImplementation testLibraries.espressoCore
+    androidTestImplementation testLibraries.espressoContrib
+    androidTestImplementation testLibraries.espressoIntent
+    androidTestImplementation testLibraries.espressoIdling
+    androidTestImplementation testLibraries.roboElectricAnnotations
+
+    implementation testLibraries.espressoIdling
+    androidTestImplementation testLibraries.mockitoAndroid
+}

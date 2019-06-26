@@ -1,0 +1,119 @@
+def versions = [
+
+        appCompatLibVersion            : '1.0.2',
+        supportLibVersion              : '1.0.0',
+        androidxConstraintLayoutVersion: '1.1.3',
+        materialVersion                : '1.0.0',
+        ktxVersion                     : '1.0.0',
+        multiDexVersion                : '2.0.0',
+
+        gradlePluginVersion            : '3.4.1',
+        kotlinVersion                  : '1.3.31',
+
+        daggerVersion                  : "2.23.1",
+        retrofitVersion                : "2.5.0",
+
+        rxJavaVersion2                 : "2.2.8",
+        rxAndroidVersion2              : "2.1.1",
+
+        gsonVersion                    : "2.8.5",
+
+        okIoVersion                    : "2.2.2",
+        okHttp3Version                 : "3.14.2",
+
+        glideVersion                   : "4.9.0",
+
+        mockitoVersion                 : '2.25.1',
+        supportTestRunnerVersion       : '1.1.0',
+        espressoVersion                : '3.2.0',
+        powerMockitoVersion            : '1.7.3',
+
+        roomVersion                    : '2.1.0',
+        playCoreVersion                : "1.6.0",
+
+        androidxTestVersion            : "1.2.0",
+        archTestVersion                : "2.0.1",
+        androidxJunitKtxVersion        : "1.1.1",
+
+        robolectricVersion             : '4.3',
+
+        lifecycleVersion               : '2.2.0-alpha01'
+]
+
+ext.versions = versions
+
+ext.gradlePlugins = [
+        androidToolsPlugin: "com.android.tools.build:gradle:$versions.gradlePluginVersion",
+        kotlinPlugin      : "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlinVersion"
+]
+
+ext.libraries = [
+
+        androidxConstraintLayout: "androidx.constraintlayout:constraintlayout:$versions.androidxConstraintLayoutVersion",
+        androidxAppCompat       : "androidx.appcompat:appcompat:$versions.appCompatLibVersion",
+        recyclerView            : "androidx.recyclerview:recyclerview:$versions.supportLibVersion",
+        googleMaterial          : "com.google.android.material:material:$versions.materialVersion",
+        androidxKtxCore         : "androidx.core:core-ktx:$versions.ktxVersion",
+
+        glide                   : "com.github.bumptech.glide:glide:$versions.glideVersion",
+        glideCompiler           : "com.github.bumptech.glide:compiler:$versions.glideVersion",
+
+        kotlinCompiler          : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlinVersion",
+
+        dagger                  : "com.google.dagger:dagger:$versions.daggerVersion",
+        daggerCompiler          : "com.google.dagger:dagger-compiler:$versions.daggerVersion",
+        daggerAndroid           : "com.google.dagger:dagger-android:$versions.daggerVersion",
+        daggerAndroidSupport    : "com.google.dagger:dagger-android-support:$versions.daggerVersion",
+        daggerAndroidProcessor  : "com.google.dagger:dagger-android-processor:$versions.daggerVersion",
+
+        okHttp3                 : "com.squareup.okhttp3:okhttp:$versions.okHttp3Version",
+        okHttp3LogInterceptor   : "com.squareup.okhttp3:logging-interceptor:$versions.okHttp3Version",
+
+        retrofit                : "com.squareup.retrofit2:retrofit:$versions.retrofitVersion",
+        retrofitGsonConverter   : "com.squareup.retrofit2:converter-gson:$versions.retrofitVersion",
+        retrofitRxAdapter       : "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofitVersion",
+
+        rxJava2                 : "io.reactivex.rxjava2:rxjava:$versions.rxJavaVersion2",
+        rxAndroid2              : "io.reactivex.rxjava2:rxandroid:$versions.rxAndroidVersion2",
+
+        gson                    : "com.google.code.gson:gson:$versions.gsonVersion",
+
+        //Room
+        roomRuntime             : "androidx.room:room-runtime:$versions.roomVersion",
+        roomCompiler            : "androidx.room:room-compiler:$versions.roomVersion",
+
+        lifecycleExtensions     : "androidx.lifecycle:lifecycle-extensions:$versions.lifecycleVersion",
+        lifecycleViewmodel      : "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycleVersion"
+]
+
+ext.testLibraries = [
+
+        junit                  : "junit:junit:4.12",
+
+        //Mockito
+        mockitoAndroid         : "org.mockito:mockito-android:$versions.mockitoVersion",
+        mockitoCore            : "org.mockito:mockito-core:$versions.mockitoVersion",
+        mockitoInline          : "org.mockito:mockito-inline:$versions.mockitoVersion",
+        mockitoKotlin          : "com.nhaarman.mockitokotlin2:mockito-kotlin:2.1.0",
+
+        //UI androidXTestExtKotlinRunnerVersion Libraries
+        espressoCore           : "androidx.test.espresso:espresso-core:$versions.espressoVersion",
+        espressoContrib        : "androidx.test.espresso:espresso-contrib:$versions.espressoVersion",
+        espressoIntent         : "androidx.test.espresso:espresso-intents:$versions.espressoVersion",
+        espressoIdling         : "androidx.test.espresso.idling:idling-concurrent:$versions.espressoVersion",
+        roboElectric           : "org.robolectric:robolectric:$versions.robolectricVersion",
+        roboElectricAnnotations: "org.robolectric:annotations:$versions.robolectricVersion",
+
+        //Support Testing Libraries
+        supportTestRules       : "androidx.test:rules:$versions.supportTestRunnerVersion",
+        supportTestRunner      : "androidx.test:runner:$versions.supportTestRunnerVersion",
+        supportTestingLibrary  : "com.android.support.test:testing-support-lib:0.1",
+
+        archCoreTesting        : "androidx.arch.core:core-testing:$versions.archTestVersion",
+        androidxKtxTesting     : "androidx.test:core-ktx:$versions.androidxTestVersion",
+        androidxJunitKtx       : "androidx.test.ext:junit-ktx:$versions.androidxJunitKtxVersion",
+        androidxTestRules      : "androidx.test:rules:$versions.androidxTestVersion",
+        androidxTestCore       : "androidx.test:core:$versions.androidxTestVersion",
+
+        roomTest               : "androidx.room:room-testing:$versions.roomVersion"
+]

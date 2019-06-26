@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Sunil K</string>
+
+    <string name="posts">Posts</string>
+    <string name="general_error">"Something went wrong. Please try again"</string>
+    <string name="no_results_found">""No data found"</string>
+
+</resources>
